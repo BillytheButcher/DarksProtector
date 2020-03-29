@@ -1,0 +1,11 @@
+D:\Dev\Released\DarksProtector\Debug\bin\DarksProtector.exe.config
+D:\Dev\Released\DarksProtector\Debug\bin\DarksProtector.exe
+D:\Dev\Released\DarksProtector\Debug\bin\DarksProtector.pdb
+D:\Dev\Released\DarksProtector\DarksProtector\obj\Debug\DarksProtector.csprojAssemblyReference.cache
+D:\Dev\Released\DarksProtector\DarksProtector\obj\Debug\DarksProtector.DarksProtectorForm.resources
+D:\Dev\Released\DarksProtector\DarksProtector\obj\Debug\DarksProtector.Properties.Resources.resources
+D:\Dev\Released\DarksProtector\DarksProtector\obj\Debug\DarksProtector.csproj.GenerateResource.cache
+D:\Dev\Released\DarksProtector\DarksProtector\obj\Debug\DarksProtector.csproj.CoreCompileInputs.cache
+D:\Dev\Released\DarksProtector\DarksProtector\obj\Debug\DarksProtector.csproj.CopyComplete
+D:\Dev\Released\DarksProtector\DarksProtector\obj\Debug\DarksProtector.exe
+D:\Dev\Released\DarksProtector\DarksProtector\obj\Debug\DarksProtector.pdb

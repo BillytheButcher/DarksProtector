@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EAB01B5-9B49-48D8-BFA1-5493B26CCB71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Confuser.Protections</RootNamespace>
+    <AssemblyName>Confuser.Protections</AssemblyName>
+    <TargetFrameworkVersion Condition=" !$(DefineConstants.Contains('NET45')) ">v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition=" $(DefineConstants.Contains('NET45')) ">v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\ConfuserEx.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dnlib, Version=1.5.0.1500, Culture=neutral, PublicKeyToken=50e96378b6e77999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dnlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="SingleFileProtections\AntiDe4Dot.cs" />
+    <Compile Include="SingleFileProtections\AntiILDasmProtection.cs" />
+    <Compile Include="AntiTamper\AntiTamperProtection.cs" />
+    <Compile Include="AntiTamper\DynamicDeriver.cs" />
+    <Compile Include="AntiTamper\IKeyDeriver.cs" />
+    <Compile Include="AntiTamper\IModeHandler.cs" />
+    <Compile Include="AntiTamper\JITBody.cs" />
+    <Compile Include="AntiTamper\JITMode.cs" />
+    <Compile Include="AntiTamper\NormalDeriver.cs" />
+    <Compile Include="AntiTamper\AntiMode.cs" />
+    <Compile Include="AntiTamper\NormalMode.cs" />
+    <Compile Include="SingleFileProtections\CalliProtection.cs" />
+    <Compile Include="Compress\Compressor.cs" />
+    <Compile Include="Compress\CompressorContext.cs" />
+    <Compile Include="Compress\DynamicDeriver.cs" />
+    <Compile Include="Compress\ExtractPhase.cs" />
+    <Compile Include="Compress\IKeyDeriver.cs" />
+    <Compile Include="Compress\NormalDeriver.cs" />
+    <Compile Include="Compress\StubProtection.cs" />
+    <Compile Include="Constants\Arithmetic\Arithmetic.cs" />
+    <Compile Include="Constants\Arithmetic\ArithmeticEmulator.cs" />
+    <Compile Include="Constants\Arithmetic\ArithmeticTypes.cs" />
+    <Compile Include="Constants\Arithmetic\ArithmeticVT.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Add.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Div.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Abs.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Ceiling.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Cos.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Floor.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Log.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Log10.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Round.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Sin.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Sqrt.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Tan.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Tanh.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Maths\Truncate.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Mul.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Sub.cs" />
+    <Compile Include="Constants\Arithmetic\Functions\Xor.cs" />
+    <Compile Include="Constants\Arithmetic\Generator\Generator.cs" />
+    <Compile Include="Constants\Arithmetic\iArithmetic.cs" />
+    <Compile Include="Constants\Arithmetic\iFunction.cs" />
+    <Compile Include="Constants\Arithmetic\Logger.cs" />
+    <Compile Include="Constants\Arithmetic\Token.cs" />
+    <Compile Include="Constants\Arithmetic\Utils\ArithmeticUtils.cs" />
+    <Compile Include="Constants\Arithmetic\Value.cs" />
+    <Compile Include="Constants\CEContext.cs" />
+    <Compile Include="Constants\ConstantProtection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants\MutateConstants.cs" />
+    <Compile Include="Constants\MutationProtection.cs" />
+    <Compile Include="Constants\Phases\MeltingPhase.cs" />
+    <Compile Include="Constants\Phases\MutationPhase.cs" />
+    <Compile Include="Constants\Phases\TestPhase.cs" />
+    <Compile Include="Constants\ReferenceReplacer.cs" />
+    <Compile Include="Constants\x86Mode.cs" />
+    <Compile Include="Constants\DynamicMode.cs" />
+    <Compile Include="Constants\EncodeElements.cs" />
+    <Compile Include="Constants\EncodePhase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants\IEncodeMode.cs" />
+    <Compile Include="Constants\InjectPhase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants\Mode.cs" />
+    <Compile Include="Constants\NormalMode.cs" />
+    <Compile Include="SingleFileProtections\AntiDumpProtection.cs" />
+    <Compile Include="SingleFileProtections\AntiDebugProtection.cs" />
+    <Compile Include="ControlFlow\Block.cs" />
+    <Compile Include="ControlFlow\BlockParser.cs" />
+    <Compile Include="ControlFlow\Blocks.cs" />
+    <Compile Include="ControlFlow\BlockScope.cs" />
+    <Compile Include="ControlFlow\CFContext.cs" />
+    <Compile Include="ControlFlow\CFHelper.cs" />
+    <Compile Include="ControlFlow\ControlFlowNewPhase.cs" />
+    <Compile Include="ControlFlow\ControlFlowProtection.cs" />
+    <Compile Include="ControlFlow\ExpressionPredicate.cs" />
+    <Compile Include="ControlFlow\Helpers\DnlibUtils\CIL\InstructionUtils.cs" />
+    <Compile Include="ControlFlow\Helpers\DnlibUtils\DnlibUtils.cs" />
+    <Compile Include="ControlFlow\Helpers\DnlibUtils\InjectHelper.cs" />
+    <Compile Include="ControlFlow\Helpers\Generator\Context\Generator.cs" />
+    <Compile Include="ControlFlow\Helpers\Generator\Context\GeneratorType.cs" />
+    <Compile Include="ControlFlow\Helpers\Generator\Context\Integers\Randomizer.cs" />
+    <Compile Include="ControlFlow\Helpers\Generator\Context\Strings\Randomizer.cs" />
+    <Compile Include="ControlFlow\Helpers\Generator\Context\Strings\RandomizerType.cs" />
+    <Compile Include="ControlFlow\IPredicate.cs" />
+    <Compile Include="ControlFlow\JumpMangler.cs" />
+    <Compile Include="ControlFlow\ManglerBase.cs" />
+    <Compile Include="ControlFlow\NormalPredicate.cs" />
+    <Compile Include="ControlFlow\SwitchMangler.cs" />
+    <Compile Include="ControlFlow\x86Predicate.cs" />
+    <Compile Include="SingleFileProtections\DisConstsConfusion.cs" />
+    <Compile Include="SingleFileProtections\EraseHeaders.cs" />
+    <Compile Include="SingleFileProtections\FakeNative.cs" />
+    <Compile Include="SingleFileProtections\HideMethods.cs" />
+    <Compile Include="MildReferenceProxy\IMildReferenceProxyService.cs" />
+    <Compile Include="SingleFileProtections\InvalidMetadataProtection.cs" />
+    <Compile Include="SingleFileProtections\JunkDump.cs" />
+    <Compile Include="MildReferenceProxy\EncodingType.cs" />
+    <Compile Include="MildReferenceProxy\ExpressionEncoding.cs" />
+    <Compile Include="MildReferenceProxy\IRPEncoding.cs" />
+    <Compile Include="MildReferenceProxy\MildMode.cs" />
+    <Compile Include="MildReferenceProxy\MildReferenceProxyProtection.cs" />
+    <Compile Include="MildReferenceProxy\Mode.cs" />
+    <Compile Include="MildReferenceProxy\NormalEncoding.cs" />
+    <Compile Include="MildReferenceProxy\ReferenceProxyPhase.cs" />
+    <Compile Include="MildReferenceProxy\RPContext.cs" />
+    <Compile Include="MildReferenceProxy\RPMode.cs" />
+    <Compile Include="MildReferenceProxy\StrongMode.cs" />
+    <Compile Include="MildReferenceProxy\x86Encoding.cs" />
+    <Compile Include="SingleFileProtections\ModuleFlood.cs" />
+    <Compile Include="SingleFileProtections\ModuleRenamer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenceProxy\x86Encoding.cs" />
+    <Compile Include="ReferenceProxy\ExpressionEncoding.cs" />
+    <Compile Include="ReferenceProxy\NormalEncoding.cs" />
+    <Compile Include="ReferenceProxy\MildMode.cs" />
+    <Compile Include="ReferenceProxy\IRPEncoding.cs" />
+    <Compile Include="ReferenceProxy\RPMode.cs" />
+    <Compile Include="ReferenceProxy\StrongMode.cs" />
+    <Compile Include="ReferenceProxy\ReferenceProxyPhase.cs" />
+    <Compile Include="ReferenceProxy\ReferenceProxyProtection.cs" />
+    <Compile Include="ReferenceProxy\RPContext.cs" />
+    <Compile Include="Resources\DynamicMode.cs" />
+    <Compile Include="Resources\IEncodeMode.cs" />
+    <Compile Include="Resources\InjectPhase.cs" />
+    <Compile Include="Resources\MDPhase.cs" />
+    <Compile Include="Resources\Mode.cs" />
+    <Compile Include="Resources\NormalMode.cs" />
+    <Compile Include="Resources\REContext.cs" />
+    <Compile Include="Resources\ResourceProtection.cs" />
+    <Compile Include="SingleFileProtections\LocalsToFields.cs" />
+    <Compile Include="SingleFileProtections\MD5Checksum.cs" />
+    <Compile Include="SingleFileProtections\StackUnfConfusion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ConfuserEx.snk">
+      <Link>Properties\ConfuserEx.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Confuser.Core\Confuser.Core.csproj">
+      <Project>{BEB67A6E-4C54-4DE5-8C6B-2C12F44A7B92}</Project>
+      <Name>Confuser.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Confuser.DynCipher\Confuser.DynCipher.csproj">
+      <Project>{E832E9B8-2158-4FC0-89A1-56C6ECC10F6B}</Project>
+      <Name>Confuser.DynCipher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Confuser.Renamer\Confuser.Renamer.csproj">
+      <Project>{862DA0DA-52E1-47CD-B9C2-46B106031B28}</Project>
+      <Name>Confuser.Renamer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Confuser.Runtime\Confuser.Runtime.csproj">
+      <Project>{A45C184F-F98F-4258-A928-BFF437034791}</Project>
+      <Name>Confuser.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

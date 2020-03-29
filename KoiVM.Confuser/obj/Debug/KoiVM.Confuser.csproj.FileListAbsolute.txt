@@ -1,0 +1,8 @@
+D:\Dev\Released\DarksProtector\KoiVM.Confuser\obj\Debug\KoiVM.Confuser.csprojAssemblyReference.cache
+D:\Dev\Released\DarksProtector\KoiVM.Confuser\obj\Debug\KoiVM.Confuser.csproj.CoreCompileInputs.cache
+D:\Dev\Released\DarksProtector\Debug\bin\KoiVM.Confuser.exe.config
+D:\Dev\Released\DarksProtector\Debug\bin\KoiVM.Confuser.exe
+D:\Dev\Released\DarksProtector\Debug\bin\KoiVM.Confuser.pdb
+D:\Dev\Released\DarksProtector\KoiVM.Confuser\obj\Debug\KoiVM.Confuser.csproj.CopyComplete
+D:\Dev\Released\DarksProtector\KoiVM.Confuser\obj\Debug\KoiVM.Confuser.exe
+D:\Dev\Released\DarksProtector\KoiVM.Confuser\obj\Debug\KoiVM.Confuser.pdb

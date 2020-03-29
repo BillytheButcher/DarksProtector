@@ -1,0 +1,6 @@
+D:\Dev\Released\DarksProtector\KoiVM.Runtime\bin\Debug\KoiVM.Runtime.dll
+D:\Dev\Released\DarksProtector\KoiVM.Runtime\bin\Debug\KoiVM.Runtime.pdb
+D:\Dev\Released\DarksProtector\KoiVM.Runtime\obj\Debug\KoiVM.Runtime.csprojAssemblyReference.cache
+D:\Dev\Released\DarksProtector\KoiVM.Runtime\obj\Debug\KoiVM.Runtime.csproj.CoreCompileInputs.cache
+D:\Dev\Released\DarksProtector\KoiVM.Runtime\obj\Debug\KoiVM.Runtime.dll
+D:\Dev\Released\DarksProtector\KoiVM.Runtime\obj\Debug\KoiVM.Runtime.pdb
